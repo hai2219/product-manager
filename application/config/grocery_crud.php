@@ -28,8 +28,8 @@
     // Make sure that the number of grocery_crud_default_per_page variable is included to this array.
     $config['grocery_crud_paging_options'] = array('10','25','50','100');
 
-    // Default theme for grocery CRUD
-    $config['grocery_crud_default_theme'] = 'flexigrid';
+    // Default theme for grocery CRUD flexigrid, datatables, bootstrap, bootstrap-v4, twitter-bootstrap
+    $config['grocery_crud_default_theme'] = 'datatables';
 
     // The environment is important so we can have specific configurations for specific environments
     $config['grocery_crud_environment'] = 'production';

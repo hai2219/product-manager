@@ -26,7 +26,8 @@ class Examples extends CI_Controller {
 
 	public function index()
 	{
-		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
+		//$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
+		$this->offices_management();
 	}
 
 	public function offices_management()
@@ -71,7 +72,7 @@ class Examples extends CI_Controller {
 	public function customers_management()
 	{
 			$crud = new grocery_CRUD();
-
+		    //$crud->set_theme('twitter-bootstrap');
 			$crud->set_table('customers');
 			$crud->columns('customerName','contactLastName','phone','city','country','salesRepEmployeeNumber','creditLimit');
 			$crud->display_as('salesRepEmployeeNumber','from Employeer')
