@@ -9,6 +9,14 @@
 
 	$this->set_js_lib($this->default_javascript_path.'/jquery_plugins/jquery.noty.js');
 	$this->set_js_lib($this->default_javascript_path.'/jquery_plugins/config/jquery.noty.config.js');
+/**
+ * product-manager
+ */
+$this->set_css($this->default_theme_path . '/bootstrap/css/bootstrap.min.css');
+$this->set_css($this->default_theme_path . '/bootstrap/css/bootstrap-theme.min.css');
+$this->set_js($this->default_theme_path . '/jquery_plugins/jquery.fancybox-1.3.4.js');
+$this->set_css($this->default_theme_path . '/product-manager/dist/css/styles.css');
+
 ?>
 <div class='ui-widget-content ui-corner-all datatables'>
 	<h3 class="ui-accordion-header ui-helper-reset ui-state-default form-title">
