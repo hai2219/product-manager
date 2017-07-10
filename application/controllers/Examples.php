@@ -26,8 +26,10 @@ class Examples extends CI_Controller {
 
 	public function index()
 	{
-		//$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
-		$this->offices_management();
+
+		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
+		//$this->offices_management();
+		redirect("/examples/customers_management");
 	}
 
 	public function offices_management()
@@ -74,12 +76,7 @@ class Examples extends CI_Controller {
 			$crud = new grocery_CRUD();
 		    //$crud->set_theme('twitter-bootstrap');
 			$crud->set_table('customers');
-			$crud->columns('customerName','contactLastName','phone','city','country','salesRepEmployeeNumber','creditLimit');
-			$crud->display_as('salesRepEmployeeNumber','from Employeer')
-				 ->display_as('customerName','Name')
-				 ->display_as('contactLastName','Last Name');
-			$crud->set_subject('Customer');
-			$crud->set_relation('salesRepEmployeeNumber','employees','lastName');
+			$crud->columns('firstName','lastName','address','idCard','phone','email');
 
 			$output = $crud->render();
 
@@ -108,8 +105,7 @@ class Examples extends CI_Controller {
 
 			$crud->set_table('products');
 			$crud->set_subject('Product');
-			$crud->unset_columns('productDescription');
-			$crud->callback_column('buyPrice',array($this,'valueToEuro'));
+		    $crud->columns('name','category','customer','price','quantity','size','custodyTime','description');
 
 			$output = $crud->render();
 
