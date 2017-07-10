@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'hostname' => '45.117.171.178',
+	'username' => 'product_manager',
+	'password' => 'Tantap@2018',
 	'database' => 'examples_database',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

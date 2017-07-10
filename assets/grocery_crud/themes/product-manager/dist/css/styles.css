@@ -494,3 +494,8 @@ header{
 table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
 	background: transparent;
 }
+
+.btn-blue.active{
+	color: white;
+	background: #393B41;
+}

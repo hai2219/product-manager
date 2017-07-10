@@ -13,8 +13,8 @@ foreach($css_files as $file): ?>
 </head>
 <body>
 	<div>
-		<a class="btn btn-blue" href='<?php echo site_url('examples/customers_management')?>'>Customers</a>
-		<a class="btn btn-blue" href='<?php echo site_url('examples/products_management')?>'>Products</a>
+		<a class="btn btn-blue <?php if($this->uri->segment(2)=="customers_management"){echo 'active';}?>" href='<?php echo site_url('examples/customers_management')?>'>Customers Manager</a>
+		<a class="btn btn-blue <?php if($this->uri->segment(2)=="products_management"){echo 'active';}?>" href='<?php echo site_url('examples/products_management')?>'>Products Manager</a>
 	</div>
 	<div style='height:20px;'></div>  
     <div>
