@@ -9,8 +9,17 @@ class Examples extends CI_Controller
 
 		$this->load->database();
 		$this->load->helper('url');
+		$this->load->library("session");
 
 		$this->load->library('grocery_CRUD');
+		$this->check_logined();
+	}
+
+	public function check_logined(){
+		$_userInfo = $this->session->userdata("___userInfo___");
+		if(!isset($_userInfo['Email'])){
+			redirect('/user');
+		}
 	}
 
 	public function _example_output($output = null)
